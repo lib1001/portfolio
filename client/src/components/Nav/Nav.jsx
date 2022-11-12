@@ -6,9 +6,9 @@ function Nav() {
   return (
     <div className='navbar'>
       <div className="logo">
-      <a href="#home">burke.</a>
+      <a href="#home">BurkeInAction.</a>
       </div>
-      <ul>
+      <ul className='nav-menu'>
       <li>
       <a href="#home">Home</a>
       </li>
