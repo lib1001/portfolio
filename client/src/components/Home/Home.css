@@ -23,6 +23,7 @@
 
 .soc-med:hover {
     transform: scale(1.3);
+    transition: 0.3s ease-in;
 }
 
 .left {
@@ -41,7 +42,7 @@
 }
 
 .left h3 {
-    font-size: 30px;
+    font-size: 22px;
 }
 
 .wrapper {
@@ -63,6 +64,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .img-container img {
@@ -70,15 +72,34 @@
     position: relative;
     height: 80%;
     border-radius: 50%;
-
+    z-index: 3;
 }
 
 .hero-img:hover {
     transform: scale(1.07);
-    transition: 1s ease-in-out;
+    transition: 1s;
 }
 
-.hero-ooptions {
+.glow {
+    content: "";
+    position: absolute;
+    height: 550px;
+    width: 550px;
+    background: linear-gradient(-45deg,#e79972, #475860, #b3ddf2);
+    z-index: 2;
+    filter: blur(20px);
+    border-radius: 50%;
+    display: flex;
+
+}
+
+.hero-img:hover + .glow {
+    transform: scale(1.16);
+    transition: 1s;
+
+}
+
+.hero-options {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -112,9 +133,13 @@
     color: black;
     font-weight: 600;
     background: linear-gradient(45deg,  #e79972,#f5d6c6);
+    transition: 0.2s ease-in;
 }
 
 .primary-btn:hover {
     background-color: #f5d6c6;
     background: linear-gradient(45deg,#475860,  #d3d3d3);
+    color: black;
+    transition: 0.2s ease-in;
+    font-weight: 600;
 }

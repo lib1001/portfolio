@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Nav.css';
 
 
 function Nav() {
+
+
   return (
     <div className='navbar'>
       <div className="logo">
       <a href="#home">BurkeInAction.</a>
       </div>
-      <ul className='nav-menu'>
+      <ul className="nav-menu">
       <li>
       <a href="#home">Home</a>
       </li>

@@ -25,7 +25,7 @@ function Home() {
 
         <h2>Hi! I'm</h2>
         <h1>Lauren Burke</h1>
-        <h3>Freelance <span></span></h3>
+        <h3>Freelance Developer with a knack for React<span></span></h3>
        <div className="hero-options">
 
         <a href="Resume.pdf" download='Lauren I. Burke Resume.pdf'>
@@ -45,6 +45,7 @@ function Home() {
       <div className="right">
       <div className="img-container">
             <img className='hero-img' src="assets/icelandv.png" alt="" />
+            <div className="glow"></div>
         </div>
     
       </div>
