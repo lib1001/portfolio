@@ -13,6 +13,7 @@ function App() {
   return (
     <div className="app">
       <Nav navOpen={navOpen} setNavOpen={setNavOpen} />
+      <Menu navOpen={navOpen} setNavOpen={setNavOpen} />
       <div className="sections">
         <Home />
         <About />
