@@ -6,8 +6,7 @@ import {FaGithub, FaLinkedin} from 'react-icons/fa'
 function Home() {
   return (
     
-    <div className='landing' id='home'>
-      
+    <div className='landing' id='home'>  
       <div className="left">
         <div className="soc-med-wrapper">
         <div className="soc-med">

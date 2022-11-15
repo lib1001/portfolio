@@ -1,16 +1,18 @@
 import "./App.css";
-import Nav from "./components/Nav/Nav";
-import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import Resume from "./components/Resume/Resume";
-import Projects from "./components/Projects/Projects";
-import Contact from "./components/Contact/Contact";
-
+import Nav from "./components/nav/Nav";
+import Home from "./components/home/Home";
+import About from "./components/about/About";
+import Resume from "./components/resume/Resume";
+import Projects from "./components/projects/Projects";
+import Contact from "./components/contact/Contact";
+import Menu from "./components/menu/Menu";
+import { useState } from "react";
 
 function App() {
+  const [navOpen, setNavOpen] = useState(false);
   return (
     <div className="app">
-      <Nav />
+      <Nav navOpen={navOpen} setNavOpen={setNavOpen} />
       <div className="sections">
         <Home />
         <About />

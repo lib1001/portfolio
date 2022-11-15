@@ -2,11 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './Nav.css';
 
 
-function Nav() {
-
-
+function Nav({navOpen, setNavOpen}) {
   return (
-    <div className='navbar'>
+    <div className={'navbar ' + (navOpen && 'active')}>
       <div className="logo">
       <a href="#home">BurkeInAction.</a>
       </div>
@@ -27,6 +25,11 @@ function Nav() {
       <a href="#contact">Contact Me</a>
       </li>
       </ul>
+      <div className="hamburger" onClick={() => setNavOpen(!navOpen)}>
+        <span className='lineOne'></span>
+        <span className='lineTwo'></span>
+        <span className='lineThree'></span>
+      </div>
     </div>
   )
 }

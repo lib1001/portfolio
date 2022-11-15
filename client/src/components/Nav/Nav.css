@@ -1,52 +1,105 @@
 .navbar {
+  position: fixed;
+  width: 100%;
+
+  background: #f5d6c6;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar__none {
+  background: transparent;
+}
+
+.logo {
+  padding-left: 25px;
+  font-size: 40px;
+}
+
+.logo a {
+  color: black;
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: #475860;
+}
+
+.nav-menu {
+  display: flex;
+  float: right;
+}
+
+.nav-menu li {
+  padding: 0 25px 0;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 19px;
+}
+
+.nav-menu li a:hover {
+  color: #475860;
+}
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 1040px) {
+  .nav-menu {
+    flex-direction: column;
+  }
+  .navbar {
     position: fixed;
     width: 100%;
-    height: 70px;
-    background:#f5d6c6;
+
+    background: #f5d6c6;
     position: fixed;
     top: 0;
     z-index: 999;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+  }
 
-.navbar__none {
-    background: transparent;
-}
 
-.logo {
-padding-left: 25px;
-font-size: 40px;
-}
-
-.logo a {
-    color: black;
-    text-decoration: none;
-}
-
-.logo a:hover {
-    color: #475860;
-}
-
-.nav-menu {
+  .hamburger {
+    display: initial;
+    width: 32px;
+    height: 25px;
     display: flex;
-    float: right;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-right: 25px;
+  }
 
+  .hamburger span {
+    width: 100%;
+    height: 3px;
+    transform-origin: left;
+    transition: all 1.5s ease;
+    background-color: black;
+  }
 
-}
-
-.nav-menu li {
-    padding: 0 25px 0;
-}
-
-.nav-menu li a {
-    text-decoration: none;
-    color: black;
-    font-size: 19px;
-}
-
-.nav-menu li a:hover {
-    color: #475860;
-    font-weight: 550;
+  .hamburger:hover > span {
+    background-color: #475860;
+  }
+  .navbar.active .hamburger span:first-child {
+    transform: rotate(45deg);
+  }
+  .navbar.active .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar.active .hamburger span:last-child {
+    transform: rotate(-45deg);
+  }
 }
